@@ -1,11 +1,14 @@
 {
-  "name": "Python 3 with Desktop-Lite",
+  "name": "Python3 with a lightweight desktop environment",
   "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
   "hostRequirements": {
     "cpus": 2
   },
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "password": "vscode",
+      "webPort": 6080
+    }
   },
   "forwardPorts": [6080],
   "portsAttributes": {
@@ -16,9 +19,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python"				
+        "ms-python.python"
       ]
     }
-  },
-  "postCreateCommand": ""
+  }
 }
